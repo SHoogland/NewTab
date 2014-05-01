@@ -29,25 +29,25 @@ namespace NewTab.Controllers {
             model.Apps = new List<Thumbnail>();
             var iisServer = new ServerManager();
             foreach (var s in iisServer.Sites) {
-                foreach (var app in s.Applications) {
-                    if (app.Path != "/" && !app.Path.Contains("NewTab")) {
+                foreach (var b in s.Bindings) {
+                    if (!s.Name.Contains("Default Web Site")) {
                         model.Apps.Add(new Thumbnail() {
-                            Application = app.Path,
-                            Link = app.Path
+                            Application = s.Name,
+                            Link = "http://" + b.Host
                         });
                     }
                 }
             }
             model.Apps.Add(new Thumbnail() {
-                Application = "/Google",
+                Application = "Google",
                 Link = "http://google.com/"
             });
             model.Apps.Add(new Thumbnail() {
-                Application = "/Facebook",
+                Application = "Facebook",
                 Link = "http://fb.com/"
             });
             model.Apps.Add(new Thumbnail() {
-                Application = "/Spotify",
+                Application = "Spotify",
                 Link = "http://play.spotify.com/"
             });
 

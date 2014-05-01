@@ -1,31 +1,31 @@
 ﻿@model NewTab.Models.IndexModel
 @{
-  ViewBag.Title = "Home Page";
-  int i = 1;
+    ViewBag.Title = "Home Page";
+    int i = 1;
 }
 <div class="row">
-  @foreach (var app in Model.Apps) {
-    <div class="col-md-3">
-      <div class=" panel panel-info">
-        <div class="panel-heading">
-          <h3 class="panel-title">@app.Application.Substring(1)</h3>
+    @foreach (var app in Model.Apps) {
+        <div class="col-md-3">
+            <div class=" panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">@app.Application</h3>
+                </div>
+                <div class="panel-body">
+                    <a class="btn btn-link" href="@app.Link">
+                        @if (File.Exists(System.Web.Hosting.HostingEnvironment.MapPath(@"/NewTab/Images/" + app.Application + ".png"))) {
+                            <img width="200" src="~/Images/@(app.Application).png" />
+                        }
+                        else {
+                            <img width="200" src="~/Images/PictureMissing.png" />
+                        }
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="panel-body">
-          <a class="btn btn-link" href="@app.Link">
-            @if (File.Exists(System.Web.Hosting.HostingEnvironment.MapPath(@"/NewTab/Images/" + app.Application.Substring(1) + ".png"))) {
-              <img width="200" src="~/Images/@(app.Application.Substring(1)).png" />
-            }
-            else {
-              <img width="200" src="~/Images/PictureMissing.png" />
-            }
-          </a>
-        </div>
-      </div>
-    </div>
-            if (i % 4 == 0) {
-    @Html.Raw("</div>")
-    @Html.Raw("<div class=\"row\">")
-            }
-            i++;
-  }
+        if (i % 4 == 0) {
+            @Html.Raw("</div>")
+            @Html.Raw("<div class=\"row\">")
+        }
+        i++;
+    }
 </div>
