@@ -40,6 +40,10 @@ namespace NewTab.Controllers {
             }
 
             model.Apps.Add(new Thumbnail() {
+                Application = "Oxxa",
+                Link = "http://mijn.oxxa.com/login.php"
+            });
+            model.Apps.Add(new Thumbnail() {
                 Application = "Google",
                 Link = "http://google.com/"
             });
