@@ -30,7 +30,7 @@ namespace NewTab.Controllers {
             var iisServer = new ServerManager();
             foreach (var s in iisServer.Sites) {
                 foreach (var b in s.Bindings) {
-                    if (!s.Name.Contains("Default Web Site")) {
+                    if (!s.Name.Contains("New-Tab") && !s.Name.Contains("Default Web Site")) {
                         model.Apps.Add(new Thumbnail() {
                             Application = s.Name,
                             Link = "http://" + b.Host
@@ -38,6 +38,7 @@ namespace NewTab.Controllers {
                     }
                 }
             }
+
             model.Apps.Add(new Thumbnail() {
                 Application = "Google",
                 Link = "http://google.com/"

@@ -12,7 +12,7 @@
                 </div>
                 <div class="panel-body">
                     <a class="btn btn-link" href="@app.Link">
-                        @if (File.Exists(System.Web.Hosting.HostingEnvironment.MapPath(@"/NewTab/Images/" + app.Application + ".png"))) {
+                        @if (File.Exists(System.Web.Hosting.HostingEnvironment.MapPath(@"/Images/" + app.Application + ".png"))) {
                             <img width="200" src="~/Images/@(app.Application).png" />
                         }
                         else {
