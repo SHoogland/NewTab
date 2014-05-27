@@ -44,6 +44,10 @@ namespace NewTab.Controllers {
                 Link = "http://mijn.oxxa.com/login.php"
             });
             model.Apps.Add(new Thumbnail() {
+                Application = "StatusCake",
+                Link = "https://www.statuscake.com/App/Login/"
+            });
+            model.Apps.Add(new Thumbnail() {
                 Application = "Google",
                 Link = "http://google.com/"
             });
