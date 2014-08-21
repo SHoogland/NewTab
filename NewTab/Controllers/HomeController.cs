@@ -59,6 +59,10 @@ namespace NewTab.Controllers {
                 Application = "Spotify",
                 Link = "http://play.spotify.com/"
             });
+            model.Apps.Add(new Thumbnail() {
+                Application = "Webogram",
+                Link = "http://zhukov.github.io/webogram/"
+            });
 
             return View(model);
         }
