@@ -259,7 +259,6 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Images\Facebook.png" />
-    <Content Include="Images\Google.png" />
     <Content Include="Images\Inventory.png" />
     <Content Include="Images\Oxxa.png" />
     <Content Include="Images\PictureMissing.png" />
@@ -268,7 +267,7 @@
     <Content Include="Images\Shoogland.png" />
     <Content Include="Images\Spotify.png" />
     <Content Include="Images\StatusCake.png" />
-    <Content Include="Images\WebSocketChat.png" />
+    <Content Include="Images\VakantieVillas2014.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />

@@ -48,10 +48,6 @@ namespace NewTab.Controllers {
                 Link = "https://www.statuscake.com/App/Login/"
             });
             model.Apps.Add(new Thumbnail() {
-                Application = "Google",
-                Link = "http://google.com/"
-            });
-            model.Apps.Add(new Thumbnail() {
                 Application = "Facebook",
                 Link = "http://fb.com/"
             });
@@ -61,7 +57,7 @@ namespace NewTab.Controllers {
             });
             model.Apps.Add(new Thumbnail() {
                 Application = "Webogram",
-                Link = "http://zhukov.github.io/webogram/"
+                Link = "https://web.telegram.org/"
             });
 
             return View(model);
